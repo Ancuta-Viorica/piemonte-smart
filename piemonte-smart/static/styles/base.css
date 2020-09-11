@@ -1,0 +1,17 @@
+body {
+    background-color: white;
+}
+table1 {
+  border-collapse: collapse;
+  border: 1px solid black;
+  padding: 20px;
+  width: 30px;
+  margin: 0 auto;
+}
+
+form {
+  border-collapse: collapse;
+  border: 1px solid black;
+  padding: 20px;
+  width: 300px;
+}

@@ -1,0 +1,68 @@
+body {
+   background-color: #f5f5f7;
+}
+h2{
+    text-align: center;
+}
+.footer mt-auto py-3{
+    width: 100%;
+   # border-top: 1px solid #DEDEDE;
+    height: 10px;
+    margin-bottom: 0px;
+    margin-top: 2em;
+    position: relative;
+    padding-top: 10px;
+	padding-bottom: 10px;
+}
+.img-fluid img-thumbnail w-50 img {
+    max-width: 100%;
+    height: 70px;
+    min-height: 15px;
+}
+.img {
+	border-radius: 8px;
+	height: 75px;
+}
+.btn {
+    border-color: #fffdd0;
+}
+#table1{
+	width: 100%;
+	float: center;
+	margin: 5px;
+	background-color: #DEDEDE;
+	border-collapse: collapse;
+	border-radius: 5px;
+	padding: 0px;
+	font-size: 15px;
+}
+
+.bd-placeholder-img {
+     font-size: 1.125rem;
+     text-anchor: middle;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+}
+@media (min-width: 768px) {
+     .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+}
+#box {
+    width: 50%;
+    height: 15vw;
+    object-fit: cover;
+}
+.container {
+  width: auto;
+  max-width: 800px;
+  padding: 0 15px;
+}
+.input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}

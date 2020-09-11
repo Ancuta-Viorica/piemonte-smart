@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <script type="text/javascript" async="async" src="http://127.0.0.1:5000/"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <!--    <title>Title</title>-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--    <title>AngularJS Flask App</title>-->
+    <!--    <link rel="stylesheet" href="{{ url_for('static',filename='base.css') }}">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='bootstrap.css') }}">
+    <script type="text/javascript" src="static/js/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title> Calcola il tuo risparmio sull'illumonazione publica </title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sticky-footer/">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+    <script type="text/javascript">
+    angular.module('myApp', [])
+    .controller('myCtrl', ['$scope', function($scope) {
+        $scope.message = "Howdy !!";
+    }])
+    .config(function($interpolateProvider) {
+        $interpolateProvider.startSymbol('//').endSymbol('//');
+    });
+
+
+
+    </script>
+</head>
+
+<!--        ng-app="myApp" ng-controller="customersCtrl">-->
+
+<div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <img src="https://linksfoundation.com/wp-content/uploads/2019/03/LINKS_logo_2x-1.png" class="img"
+             alt="Links Foundation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+</div>
+
+
+<!--<script type="text/javascript">-->
+<!--        $(document).ready(function () {-->
+<!--            $("form").submit(function () {-->
+<!--                User = $("input[name='comune']").val();-->
+<!--                Password = $("input[name='email']").val();-->
+<!--                alert(User+Password);-->
+
+<!--                return false;-->
+<!--            })-->
+<!--        });-->
+
+
+<!--</script>-->
+
+<div class="container">
+    <br>
+    <h2>TUTTO LED</h2>
+    </br>
+    <br>
+    <h2>Buongiorno {{ email }}!</h2>
+    </br>
+    <div id="table1">
+        <form method="POST" action="{{url_for('output')}}">
+            <div class="form-group">
+                <label for="comuneLed">COMUNE:</label>
+                <input type="text" class="form-control" id="comuneLed" placeholder="Comune" name="comuneLed"
+                       required="1">
+            </div>
+            <div class="form-group">
+                <label for="emailLed">Email:</label>
+                <input type="email" class="form-control" id="emailLed" placeholder="Email" name="emailLed"
+                       required="1">
+            </div>
+            <button type="submit" class="btn btn-primary">Invia</button>
+        </form>
+    </div>
+</div>
+<!-- Footer -->
+<footer class="footer mt-auto py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div id="box">
+                    <a href="https://www.anci.piemonte.it/">
+                        <img class="img-thumbnail w-75"
+                             src="https://www.anci.piemonte.it/wp-content/uploads/2017/08/logo-anci-trasparente.png">
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <a href="https://www.regione.piemonte.it/">
+                    <img class="img-thumbnail w-75"
+                         src="https://www.regione.piemonte.it/loghi/im/grafica/logo_RegPiem.jpg">
+                </a>
+            </div>
+            <div class="col-sm-3">
+                <a href="https://www.confservizi.piemonte.it/">
+                    <img class="img-thumbnail w-75"
+                         src="https://i2.wp.com/www.confservizi.piemonte.it/wp-content/uploads/2018/11/logo-confservizi.png?fit=360%2C79&ssl=1">
+                </a>
+            </div>
+            <div class="col-sm-3">
+                <a href="https://linksfoundation.com/">
+                    <img src="https://linksfoundation.com/wp-content/uploads/2019/03/LINKS_logo_2x-1.png"
+                         class="img-thumbnail w-75" alt="Links Foundation">
+                </a>
+            </div>
+        </div>
+        <div>
+            <p class="footer-copyright text-center py-3">Per eventuali problemi contattarci all'email clicca <a href = "mailto:paolo.lazzeroni@linksfoundation.com">qui!</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
