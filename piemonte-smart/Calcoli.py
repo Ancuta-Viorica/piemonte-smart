@@ -10,8 +10,7 @@ import self as self
 
 
 class Riduzione50():
-
-    inp = str(input("Tipologia Illuminazione Riduzione 50%: "))
+    inp=(str(input("Tipologia l'illuminazione: ")))
 
     if inp != 'led':
         downLightOutputRatio = 0.8
@@ -36,9 +35,10 @@ class Riduzione50():
         efficienzaLuminosa = switcher[inp]
         return efficienzaLuminosa
 
-    puntiLuce = int(input('Punti Luce: '))
+    puntiLuce = int(input("Punti Luce:" ))
     energiaTotale = int()
     efficienzaLuminosa = tipologia(inp)
+
 
 #1. Stima efficienza complessiva media 𝜼_𝑖  per ogni tecnologia
     # di punto luce a partire dall’efficienza luminosa media
@@ -54,14 +54,12 @@ class Riduzione50():
 
     print("--------Consimi 2015-------------")
 
-
-
     def PesiRipartizione15(totale, puntiLuce):      ###### def 15
-        if totale == 0 and puntiLuce == 0:
-            return 1
-        else:
+        # if totaleInc == 0 and puntiLuce == 0:
+        #     return 1
+        # else:
             n=(puntiLuce * (1 / totale))
-            print("pesi 2015",n)
+            print("pesi ",n)
             # Ni =range (6)
             # for i in (Ni):
             #     print (i)
@@ -80,10 +78,11 @@ class Riduzione50():
             # # out=d0(v1,v2)
             # print("outt", out)
 
-            risultato = 0
-            tot = puntiLuce * (1 / totale)
-            tot += risultato
-            w = n / (tot) # ????
+            # risultato = 0
+            # tot = puntiLuce * (1 / totale)
+            # tot += risultato
+            # w = n / (tot) # ????
+            w=n
             return w
 
     w = PesiRipartizione15(totale, puntiLuce)
@@ -96,13 +95,13 @@ class Riduzione50():
     #     print(tot)
 
 
-
-    def somma(n):
-        risultato = 0
-        for i in float(n):
-            risultato += i
-            print("‘pesi pesi:’", i)
-        print(len("‘La somma è: ‘", risultato))
+    #
+    # def somma(n):
+    #     risultato = 0
+    #     for i in float(n):
+    #         risultato += i
+    #         print("‘pesi pesi:’", i)
+    #     print(len("‘La somma è: ‘", risultato))
 
 
 

@@ -41,34 +41,77 @@
     </nav>
 </div>
 <div class="container">
-    <h1>Output</h1>
-    <table class="table1">
+    <br>
+    <h1>Output </h1>
+    </br>
+    <table class="table table-dark">
         <thead>
         <tr>
             <th scope="col">Comune</th>
-            <th scope="col">Email</th>
-            <th scope="col">PL da sostituire in Led</th>
+            <th scope="col">{{ comune }}</th>
+
         </tr>
         </thead>
-        <tbody>
         <tr>
-            <td>{{ comune }}</td>
-            <td>{{ email }}</td>
-            <td>{{ puntiLuce }}
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">{{incandescenza}}di cui  incandescenza</li>
-                    <li class="list-group-item">di cui  vapori di mercurio ad alta pressione</li>
-                    <li class="list-group-item">di cui  alogenuri/ioduri metallici</li>
-                    <li class="list-group-item">di cui  sodio a bassa pressione</li>
-                    <li class="list-group-item">di cui  sodio ad alta pressione</li>
-                </ul>
-            </td>
-            <td>{{ email }} investimento necessario in €</td>
-            <td>{{ email }} risparmio energetico ottenibile in kWh</td>
-            <td>{{ email }} risparmio economico ottenibilie in €</td>
-            <td>{{ email }} Payback time in anni</td>
-            <td>{{ email }} Payback time in anni compresi incentivi</td>
+        <tr>
+            <th scope="row">Punti luce da sostituire con LED</th>
+            <td>{{ puntiLuce }}</td>
         </tr>
+        <tr>
+            <th scope="row">Punti luce con tecnologia Incandescenza</th>
+            <td>{{ incandescenza }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Punti luce con tecnologia Vapori di Mercurio ad Alta Pressione</th>
+            <td>{{ mercurio }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Punti luce con tecnologia Alogenuri/Ioduri Metallici</th>
+            <td>{{ ioduri }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Punti luce con tecnologia Sodio a Bassa Pressione</th>
+            <td>{{ sodioBassa }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Punti luce con tecnologia Sodio ad Alta Pressione</th>
+            <td>{{ sodioAlta }}</td>
+        </tr>
+
+        <tr>
+            <th scope="row" id="investimento" name="investimento">Investimento necessario in €</th>
+            <td> {{ email }} </td>
+        </tr>
+        <tr>
+            <th scope="row">Risparmio energetico ottenibile in kWh</th>
+            <td>{{ email }} </td>
+        </tr>
+        <tr>
+            <th scope="row">Riduzione consumo energico in %</th>
+            <td>{{ email }} </td>
+        </tr>
+        <tr>
+            <th scope="row">Risparmio economico ottenibilie in €</th>
+            <td>{{ email }} </td>
+        </tr>
+        <tr>
+            <th scope="row">TEE (Titolo di efficienza energetica) in €</th>
+            <td>{{ email }} </td>
+        </tr>
+        <tr>
+            <th scope="row">Payback time in anni</th>
+            <td>{{ email }} </td>
+        </tr>
+        <tr>
+            <th scope="row">Payback time in anni compresi incentivi</th>
+            <td>{{ email }} </td>
+        </tr>
+
+<!--        <td>{{ email }} investimento necessario in €</td>-->
+<!--        <td>{{ email }} risparmio energetico ottenibile in kWh</td>-->
+<!--        <td>{{ email }} risparmio economico ottenibilie in €</td>-->
+<!--        <td>{{ email }} Payback time in anni</td>-->
+<!--        <td>{{ email }} Payback time in anni compresi incentivi</td>-->
         </tbody>
     </table>
 </div>
@@ -104,7 +147,8 @@
             </div>
         </div>
         <div>
-            <p class="footer-copyright text-center py-3">Per eventuali problemi contattarci all'email clicca <a href = "mailto:paolo.lazzeroni@linksfoundation.com">qui!</a>
+            <p class="footer-copyright text-center py-3">Per eventuali problemi contattarci all'email clicca <a
+                    href="mailto:paolo.lazzeroni@linksfoundation.com">qui!</a>
         </div>
     </div>
 </footer>

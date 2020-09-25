@@ -64,10 +64,10 @@
     <h2>TUTTO LED</h2>
     </br>
     <br>
-    <h2>Buongiorno {{ email }}!</h2>
+    <h2>Buongiorno {{ comuneLed }}!</h2>
     </br>
     <div id="table1">
-        <form method="POST" action="{{url_for('output')}}">
+        <form method="POST" name="modulo" id="modulo" action="{{url_for('insert')}}">
             <div class="form-group">
                 <label for="comuneLed">COMUNE:</label>
                 <input type="text" class="form-control" id="comuneLed" placeholder="Comune" name="comuneLed"

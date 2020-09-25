@@ -62,10 +62,10 @@
     <h2>RIDUZIONE DEI CONSUMI DEL 50%</h2>
     </br>
     <br>
-    <h2>Buongiorno {{ email }}!</h2>
+    <h2>Buongiorno {{ comune }}!</h2>
     </br>
     <div id="table1">
-        <form method="POST" name="modulo" id="modulo" action="{{url_for('output')}}" onSubmit="return controllo();">
+        <form method="POST" name="modulo" id="modulo" action="{{url_for('insert')}}">
             <div class="form-group">
                 <label for="comune">COMUNE:</label>
                 <input type="text" class="form-control" id="comune" placeholder="Comune" name="comune"
@@ -81,25 +81,6 @@
     </div>
 </div>
 
-<script language="JavaScript">
-    function controllo(){
-    with(document.modulo) {
-        if(comune.value=="") {
-        alert("Errore: compilare il campo COMUNE");
-        comune.focus();
-        return false;
-        }
-        if(email.value=="") {
-        alert("Errore: compilare il campo EMAIL");
-        email.focus();
-        return false;
-        }
-    }
-    alert("Controllo effettuato con successo. Il modulo sarà inviato.");
-    return true;
-    }
-</script>
-<!-- Footer -->
 <footer class="footer mt-auto py-3">
     <div class="container">
         <div class="row">
